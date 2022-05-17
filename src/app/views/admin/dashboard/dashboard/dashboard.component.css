@@ -1,0 +1,122 @@
+main{
+    padding-top: 2.5rem ;
+}
+.analytics{
+   display:grid;
+   grid-template-columns :repeat(4,1fr);
+   grid-gap: 2rem;
+    width: 100%;
+    margin-bottom: 3rem;
+
+}
+.analytic{
+   box-shadow: 2px 2px 2px 0 rgb(184, 183, 183);
+   padding:1rem;
+   border-radius:5px;
+   display: flex;
+   padding-left: 2rem;
+
+}
+.analytic-info h4{
+   font-weight: 400;
+   color:rgb(153, 152, 152);
+   font-size: .98rem;
+
+}
+.analytic-info h1{
+    color:rgb(61, 61, 66);
+    font-weight:600 ;
+}
+.analytic-info h1 small{
+     font-size: .8rem;
+     font-weight: 700;
+}
+.text-danger{
+    color:red;
+}
+.text-success{
+    color:green;
+}
+.analytic-icon{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: relative ;
+}
+ .section-head{
+     font-size:1.4rem;
+     color:rgb(80, 81, 134);
+     font-weight: 600;
+     margin-bottom: 1rem;
+ }
+ .block-grid{
+     display:grid;
+     grid-template-columns:30% auto;
+     grid-gap:3rem;
+ }
+ .rev-content{
+     background: #fff;
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+     border-radius: 15px;
+     padding: 1rem 2rem;
+     text-align: center;
+ }
+
+ .rev-content img {
+ width:180px;
+ margin:1.5rem 0rem;
+ border-radius: 50% ;
+ }
+
+ .rev-info h3{
+     margin-bottom: 1rem;
+ }
+ .rev-info h3 ,
+ .rev-info h1 {
+     font-weight:600;
+     color: rgb(94, 95, 109) ;
+ }
+ .rev-info h1 {
+     font-weight: 400;
+     font-size: 1rem ;
+     color:#555;
+ }
+ .rev-info h1{
+     font-weight: 600;
+     margin-top:.2rem;
+ }
+ .rev-info small{
+     font-weight: 600;
+     font-size: 1rem;
+ }
+ .rev-sum h4{
+     color:#555;
+     font-weight: 400;
+     margin-bottom: .5rem;
+
+ }
+ .rev-sum{
+     background:rgb(153, 158, 226) ;
+     border:1px solid rgb(125, 145, 190);
+     padding:1rem;
+     border-radius:10px;
+ }
+ .rev-sum h2{
+   font-weight:600;
+   color:rgb(78, 77, 77);
+ }
+ .graph-content{
+     border-radius: 15px;
+     background: #fff;
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+     padding: 1rem;
+ }
+ h1{
+     color:rgb(70, 81, 139);
+      font-weight: 400;
+ }
+  h1 .text-analytic{
+     font-size: .5rem;
+     font-weight: 200;
+ }

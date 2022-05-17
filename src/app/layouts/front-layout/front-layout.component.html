@@ -1,0 +1,86 @@
+<!--navbar-->
+<div class="header">
+    <nav class=" justify-between">
+      <input id="nav-toggle" type="checkbox">
+     <a href="#">
+     <img src="assets/img/logonav.png" style=" height: 90%;  margin-left: 30px; ">
+     </a>
+
+      <ul class="links">
+          <!--(click)="toServices"-->
+        <li><a href="#"   class="nav-links" routerLink="Services">Services</a></li>
+        <!--(click)="toAbout" -->
+        <li> <a href="#"   class="nav-links" routerLink="About">About Us</a></li>
+        <li><a href="#" class="nav-links nav-links-btn" routerLink="/loginuser">Login</a></li>
+        <li><a href="#" class="nav-links nav-links-btn" routerLink="/contact">Contact Us</a></li>
+      </ul>
+      <label for="nav-toggle" class="icon-burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+    </nav>
+  </div>
+  <!--navbar-->
+
+<!--this is spa page for content-->
+ <router-outlet></router-outlet>
+ <!--this is spa page for content-->
+
+ <!--footer-->
+ <footer>
+  <div class="footer">
+    <div class="container">
+      <div class="wrapper">
+        <div class="footer-widget">
+       <a href="#">
+         <img src="assets/img/logo.png" class="logo" style="margin-bottom:20px; width:60px; margin-right:0px;  border-radius: 30px;">
+         <label class="logoa"  >Transcri</label><label class="logob">BOT</label>
+       </a>
+       <p>1-2292 Rue Du Havre Montreal, QC H2Y 2K1<br/>
+        +1 (514) 659 0704</p>
+        <ul class="socials">
+          <li>
+            <a href="#">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-twitter"></i>
+            </a>
+          </li>
+        </ul>
+        </div>
+        <div class="footer-widget">
+          <h5 >Services</h5>
+          <ul class="links">
+            <li><a href="#">Devenir un partenaire</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-widget">
+          <h5> Entreprise</h5>
+          <ul class="links">
+            <li><a href="#">A propos</a></li>
+            <li><a href="#"> Carrières</a></li>
+            <li><a href="#"> Politique de confidentialité</a></li>
+            <li><a href="#">  Conditions d'utilisation</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright-wrapper">
+        <p>&copy;2022 TranscriBoot By
+          <a href="#" target="blank">TargetCatcher</a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+  </footer>
+  <!--footer-->

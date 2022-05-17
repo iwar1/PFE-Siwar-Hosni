@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="forms">
+        <!--loginform-->
+        <div class="form login">
+            <span class="title">login</span>
+            <!--beginform-->
+            <form [formGroup]="formGrp" (ngSubmit)="submit()" novalidate>
+                <!--email input-->
+                <div class="input-field">
+                    <input type="email" name="email" id="email" placeholder="Enter your email" formControlName="emailctrl" [(ngModel)]="email" required>
+                    <i class="bi bi-envelope"></i>
+                </div>
+
+                <div *ngIf="emailid['emailctrl'].touched && emailid['emailctrl'].invalid" class="show-error" class="alert-message">
+                    <div *ngIf="emailid['emailctrl'].errors?.['required'] && emailid['emailctrl'].dirty">Please enter your email id</div>
+                    <div *ngIf="emailid['emailctrl'].errors?.['email'] && emailid['emailctrl'].dirty">Please enter valid email id</div>
+                </div>
+
+                <!--password input-->
+                <div class="input-field">
+                    <input [type]="showPassword ? 'text' : 'password'"  name="password" id="pass" placeholder="Enter your password" formControlName="passwordctrl" [(ngModel)]="password" required>
+                    <i class="bi bi-lock icon"></i>
+                    <i class="bi bi-eye" id="showHidePw" (click)="togglePasswordVisibility()" >
+                        {{showPassword?'':''}}
+                    </i>
+                </div>
+
+                <div *ngIf="passwordid['passwordctrl'].touched && passwordid['passwordctrl'].invalid" class="show-error" class="alert-message">
+                    <div *ngIf="passwordid['passwordctrl'].errors?.['required'] && passwordid['emailctrl'].dirty">Please enter your password</div>
+                    <div *ngIf="passwordid['passwordctrl'].errors?.['minLength'] && passwordid['emailctrl'].dirty">  Password must be at least 6 characters</div>
+                </div>
+
+                <!--checkbox-->
+                <div class="checkbox-text">
+                    <div class="checkbox-content">
+                        <input type="checkbox" id="logoCheck">
+                        <label for="logoCheck" class="text">Remember me</label>
+                    </div>
+                    <a href="#" class="text">Forgot password?</a>
+                </div>
+                <!--boton login-->
+                <div class="input-field  button">
+                <!-- <input type="button" value="Login Now">-->
+                  <button type="submit" >login</button>
+                </div>
+                <!--alerte-->
+                <!--
+                <div class="form-group">
+                    <div class="alert alert-danger" role="alert"  >
+                    </div>
+                  </div>
+                -->
+                  <!--alerte-->
+            </form>
+            <br/>
+            <!--signin with-->
+            <div class="form-group">
+
+                <p class="social-login text-center">
+                    Sign in with:
+                    <a href="#">
+                        <img alt="" src="/assets/img/google.png" class="google">
+                    </a>
+
+                    <a href="#">
+                        <img alt="" src="/assets/img/linkedin.png" class="linkedin">
+                    </a>
+                </p>
+            </div>
+            <!--end form-->
+            <div class="login-signup">
+                <span class="text">Not a member?
+                    <a href="#" class="text signup-text" routerLink="/register" >signup now</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<br/><br/><br/>
+<br/><br/><br/>
+

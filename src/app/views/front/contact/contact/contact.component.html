@@ -1,0 +1,101 @@
+<br/><br/><br/><br/><br/>
+<div class="content">
+    <img src="assets/img/contact.gif" style="float:left; width: 600px;  height: 600px;">
+</div>
+
+<div class="container">
+    <div class="forms"  >
+        <!--loginform-->
+        <!--[hidden]="submitted"-->
+        <div class="form login">
+
+            <!--beginform-->
+            <!--[formGroup]="myForm"-->
+            <form  (ngSubmit)="onSubmit()"
+                 novalidate>
+                <!--firstname input-->
+                <div class="input-field">
+                    <input type="name" name="fname" id="fname" placeholder="Enter your first name"
+                    [(ngModel)]="message.firstName"
+                         required>
+                    <i class="bi bi-person"></i>
+                </div>
+                <!--
+                <div *ngIf="fname['fnamectrl'].touched && fname['fnamectrl'].invalid" class="show-error" class="alert-message">
+                 <div *ngIf="fname['fnamectrl'].errors?.['required'] && fname['fnamectrl'].dirty ">Please enter your first name</div>
+                </div>-->
+                  <!--lastname input-->
+                <div class="input-field">
+                    <input type="name" name="lname" id="lastname" placeholder="Enter your last name"
+                    [(ngModel)]="message.lastName"
+                     required>
+                    <i class="bi bi-person"></i>
+                </div>
+                <!--
+                <div *ngIf="lname['lnamectrl'].touched && lname['lnamectrl'].invalid" class="show-error" class="alert-message">
+                    <div *ngIf="lname['lnamectrl'].errors?.['required'] && lname['lnamectrl'].dirty">Please enter your last name</div>
+                </div>-->
+                 <!--companyname input-->
+                 <div class="input-field">
+                    <input type="name" name="cname" id="companyname" placeholder="Enter your company name"
+                    [(ngModel)]="message.companyName"
+                     required>
+                    <i class="bi bi-building"></i>
+                </div>
+                <!--
+                <div *ngIf="lname['cnamectrl'].touched && lname['cnamectrl'].invalid" class="show-error" class="alert-message">
+                    <div *ngIf="lname['cnamectrl'].errors?.['required'] && lname['cnamectrl'].dirty">Please enter your company name</div>
+                </div>-->
+                <!-- formcontrolName="emailctrl" ngModel [ngModelOptions]="{standalone: true}" -->
+                 <!--companyemail input-->
+                 <div class="input-field">
+                    <input type="email" name="email" id="myemailid" placeholder="Enter your email"
+                    [(ngModel)]="message.email"
+                       required>
+                    <i class="bi bi-envelope"></i>
+                </div>
+                <!--
+                <div *ngIf="emailid['emailctrl'].touched && emailid['emailctrl'].invalid" class="show-error" class="alert-message">
+                    <div *ngIf="emailid['emailctrl'].errors?.['required'] && emailid['emailctrl'].dirty">Please enter your email id</div>
+                    <div *ngIf="emailid['emailctrl'].errors?.['email'] && emailid['emailctrl'].dirty">Please enter valid email id</div>
+                  </div>-->
+                <!--phone number input-->
+                <div class="input-field">
+                    <input type="tel" name="tel" id="myphonenumber" placeholder="Enter your phone number"
+                    [(ngModel)]="message.phoneNumber"
+                     required>
+                    <i class="bi bi-telephone"></i>
+                </div>
+                <!--
+                <div *ngIf="phonenumber['phonenumberclr'].touched && phonenumber['phonenumberclr'].invalid" class="show-error" class="alert-message">
+                    <div *ngIf="phonenumber['phonenumberclr'].errors?.['required'] && phonenumber['phonenumberclr'].dirty">Please enter your phone number</div>
+                    <div *ngIf="phonenumber['phonenumberclr'].errors?.['pattern'] && phonenumber['phonenumberclr'].dirty">Please enter valid phone number</div>
+                </div>-->
+                <!--message input-->
+
+                <div class="input-field">
+                    <textarea id="w3review" name="w3review" rows="3" cols="50"  [(ngModel)]="message.text"     placeholder="Enter your message" style="width:115% ;"  ></textarea>
+                    <i class="bi bi-chat"></i>
+                </div>
+
+                <!--boton Send-->
+                <!--class="btn btn-success"-->
+                <div class="input-field  ">
+                    <button type="submit" class="botton" (click)="alertmessage()" >Send Now</button>
+                <!-- <input type="button" value="Send Now"  >-->
+                </div>
+
+            </form>
+            <!--end form-->
+
+        </div>
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/>
+<!--
+<div [hidden]="!submitted" style="margin-left: 800px; margin-bottom: 300px;" >
+    <h3 style="color: #4070f4;">Thank you! Your message has been successfully sent. ...</h3>
+    <br/>
+    <button class="bottonB"  (click)="newMessage()">Back</button>
+   </div>
+-->

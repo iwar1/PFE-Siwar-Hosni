@@ -1,0 +1,25 @@
+<br><br><br>
+<br><br><br>
+<div  class="detail-container" *ngIf="user" >
+  <h2>DETAILS</h2>
+  <div>
+    <label><b>First Name: </b></label>{{user.firstName}}
+  </div>
+  <br>
+  <div>
+    <label><b>Last Name: </b></label> {{user.lastName}}
+  </div>
+  <br>
+  <div>
+    <label><b>Phone Number: </b></label>{{user.phoneNumber}}
+  </div>
+  <br>
+  <div>
+    <label><b>Email Id: </b></label> {{user.email}}
+  </div>
+
+<br><br>
+<button (click)="list()"  class="btn btn-primary">Back to User List</button><br>
+</div>
+
+

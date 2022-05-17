@@ -1,0 +1,172 @@
+/*style l container*/
+.container{
+    position:relative;
+    max-width:430;
+    width:50%;
+    background: #fff;
+    border-radius:10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-top:15%;
+
+}
+ .google{
+    width:40px;
+
+}
+.linkedin{
+    width:25px;
+}
+p {
+    color: rgb(51, 51, 51);
+}
+/*distance bin l container wel form*/
+.container .form{
+    padding:30px;
+}
+/*style title login*/
+.container .form .title{
+   position:relative;
+    font-size: 27px;
+    font-weight:600 ;
+}
+/*ligne elli ta7t title*/
+.form .title::before{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:0;
+    height:3px;
+    width:30px;
+    background-color: #4070f4;
+    border-radius: 25px;
+}
+/*distansation entre les input*/
+.form .input-field{
+   position: relative;
+    height: 50px;
+    width:100%;
+    margin-top:30px;
+}
+/*style ta3 l input*/
+.input-field input{
+    position:absolute;
+    height:100%;
+    width: 100%;
+    padding: 0 35px;
+    font-size: 16px;
+    border:none;/*pas de bordure*/
+    outline:none;/*ki nenzel al input maach ytala3li lobdure*/
+    border-bottom:2px solid #ccc;/* t7ot ligne ta7t l input*/
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+.mat-form-field{
+    width: 100%;
+
+
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color:#4070f4;/*ak lkhat elli ta7t l input yetbadel lel azra9 ki nenzel*/
+}
+/*style ta3 les icons*/
+.input-field i {
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+color:#999;
+font-size: 23px;
+}
+/* wa9t nenzel 3al input les icons yetbadlou bel azra9*/
+.input-field input:is(:focus, :valid) ~ i{
+    color:#4070f4;
+}
+
+.input-field i.icon{
+    left:0;
+}
+/* distanciation bin les icons elli 3al imin w 3al isar*/
+.input-field i#showHidePw{
+    right: 0%;
+    cursor:pointer;
+    padding: 10px;
+}
+/*lremember me */
+.form .checkbox-text{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;/* espace bin zouz ktibet*/
+    margin-top: 20px;/*nba3ed lktiba 3la input */
+}
+/*style l check box*/
+.checkbox-text .checkbox-content{
+    display:flex;
+    align-items: center;
+}
+.checkbox-content input{
+   margin:0 8px -2px 4px;/*ki tenzel 3la jomlet remember me yaaml check(dis bin text wel check box)*/
+    accent-color: #4070f4;/*loun check box*/
+}
+/* style l textb ta3 lform*/
+.form .text{
+    color:#333;
+    font-size: 14px;
+}
+/* style lel lien ta3 lform*/
+.form a.text{
+    color: #4070f4;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+/* style ta3 l bouton*/
+.form .button{
+    margin-top:35px;
+}
+
+.form .button input{
+    border:none;
+    color:#fff;/*couler du text */
+    font-size:17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius:6px;
+    background-color:#4070f4;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.form .button input:hover{
+    background-color: #5396e2;
+}
+ /* style ta3 dernier text et lien*/
+ .login-signup{
+    margin-top:30px;/* distance du top*/
+    text-align: center;/* centrer*/
+}
+ /*hedhi bizzare choufha baa3ed*/
+.invalid-feedback{
+    color: #4070f4;
+}
+.alert-message{
+    color: #FF0000;
+
+}
+/* style nouveau type de boutton*/
+.input-field button {
+    border:none;
+    color:#fff;/*couler du text */
+    font-size:17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius:6px;
+    background-color:#4070f4;
+    cursor:pointer;
+    transition:all 0.3s ease;
+    width :100%;
+    padding: 13px;
+}
+.input-field button:hover{
+    background-color: #5396e2;
+}

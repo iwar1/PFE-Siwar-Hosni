@@ -1,0 +1,71 @@
+/*h1{
+    position:center;
+    margin-left: 300px;
+    color: #3b5998;
+    font-weight:600 ;
+    margin-bottom: 10px;
+
+}*/
+.header-title{
+    color: rgb(70, 81, 139);
+    margin-left: 20px;
+}
+.form .form-group{
+    position: relative;
+     height: 90px;
+     width:100%;
+     margin-top:80px;
+ }
+ .form-group input{
+    border:none;/*pas de bordure*/
+    outline:none;/*ki nenzel al input maach ytala3li lobdure*/
+    border-bottom:2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+
+
+ }
+ button{
+     width: 150px;
+     background-color: #3b5998;
+ }
+ /* alerte message*/
+ .alert-message{
+    color: #FF0000;
+
+}
+/* style ta3 input wel icon*/
+.form-group i#showHidePw{
+    right: 0%;
+    cursor:pointer;
+    padding: 10px;
+}
+
+.form-group i {
+  position:absolute;
+   top:67%;
+   transform:translateY(-50%);
+    color:#999;
+    font-size: 23px;
+    margin-right: 240px;
+    }
+.form-group input:is(:focus, :valid) ~ i{
+     color:#4070f4;
+   }
+ /* wa9t nenzel 3al input les icons yetbadlou bel azra9*/
+.form-group input:is(:focus, :valid){
+     border-bottom-color:#4070f4;/*ak lkhat elli ta7t l input yetbadel lel azra9 ki nenzel*/
+    }
+ /*distansation entre les input*/
+.form .form-group{
+    position: relative;
+     height: 50px;
+     width:100%;
+     margin-top:30px;
+ }
+ .form-group .f-control{
+     width: 100%;
+ }
+ button{
+    background-color:#4070f4;
+ }

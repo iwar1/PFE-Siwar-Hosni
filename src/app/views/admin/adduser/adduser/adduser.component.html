@@ -1,0 +1,81 @@
+<br/><br/> <br/><br/> <br/><br/>
+
+<!--[hidden]="submitted" -->
+<div     style="width: 500px; margin-left: 350px; margin-bottom: 126px;">
+  <form  (ngSubmit)="onSubmit()" [formGroup]="formGrp" novalidate >
+  <!--firstname input-->
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <br>
+      <input type="name" class="f-control" id="fname" name="fname"
+      [(ngModel)]="user.firstName"
+      formControlName="fnamectrl"   required >
+    </div>
+    <div *ngIf="fname['fnamectrl'].touched && fname['fnamectrl'].invalid" class="show-error" class="alert-message">
+      <div *ngIf="fname['fnamectrl'].errors?.['required'] && fname['fnamectrl'].dirty">Please enter the first name</div>
+  </div>
+  <br>
+ <!--lastname input-->
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <br>
+      <input type="text" class="f-control" id="lname" name="lname"
+       [(ngModel)]="user.lastName"
+       formControlName="lnamectrl" required>
+    </div>
+    <div *ngIf="lname['lnamectrl'].touched && lname['lnamectrl'].invalid" class="show-error" class="alert-message">
+      <div *ngIf="lname['lnamectrl'].errors?.['required'] && lname['lnamectrl'].dirty">Please enter the last name</div>
+  </div>
+  <br>
+   <!--phone number input-->
+    <div class="form-group">
+      <label for="name">Phone Number</label>
+      <br>
+      <input type="tel" class="f-control" id="phonenumber" name="phonenumber"
+      formControlName="phonenumberclr"
+         [(ngModel)]="user.phoneNumber"   required >
+    </div>
+    <div *ngIf="phonenumber['phonenumberclr'].touched && phonenumber['phonenumberclr'].invalid" class="show-error" class="alert-message">
+      <div *ngIf="phonenumber['phonenumberclr'].errors?.['required'] && phonenumber['phonenumberclr'].dirty">Please enter the phone number</div>
+      <div *ngIf="phonenumber['phonenumberclr'].errors?.['pattern'] && phonenumber['phonenumberclr'].dirty">Please enter valid phone number</div>
+  </div>
+  <br>
+    <!--email input-->
+    <div class="form-group">
+        <label for="name">Email</label>
+        <br>
+        <input type="email" class="f-control" name="email" id="email"
+          formControlName="emailctrl"
+           [(ngModel)]="user.email" required >
+    </div>
+    <div *ngIf="emailid['emailctrl'].touched && emailid['emailctrl'].invalid" class="show-error" class="alert-message">
+      <div *ngIf="emailid['emailctrl'].errors?.['required'] && emailid['emailctrl'].dirty">Please enter the email id</div>
+      <div *ngIf="emailid['emailctrl'].errors?.['email'] && emailid['emailctrl'].dirty">Please enter valid email id</div>
+    </div>
+    <br>
+    <!--password input-->
+    <div class="form-group">
+       <label for="name">Password</label>
+       <br>
+       <input  [type]="showPassword ? 'text' : 'password'"  class="f-control"  name="password" id="password"
+       formControlName="passwordctrl"
+         [(ngModel)]="user.password" required  >
+         <i class="bi bi-eye" id="showHidePw" (click)="togglePasswordVisibility()">
+          {{showPassword?'':''}}
+         </i>
+    </div>
+    <div *ngIf="passwordid['passwordctrl'].touched && passwordid['passwordctrl'].invalid" class="show-error" class="alert-message">
+      <div *ngIf="passwordid['passwordctrl'].errors?.['required'] && passwordid['passwordctrl'].dirty">Please enter the password</div>
+      <div *ngIf="passwordid['passwordctrl'].errors?.['minLength'] && passwordid['passwordctrl'].dirty">  Password must be at least 6 characters</div>
+  </div>
+  <br/> <br/>
+<!--button-->
+  <button type="submit"  class="btn btn-success" (click)="added()" >Add</button>
+  </form>
+</div>
+<!--
+<div  [hidden]="!submitted"  style="margin-left: 380px; margin-bottom: 387px;" >
+ <h3 style="color:green;">You submitted successfully!</h3>
+ <br/>
+ <button class="btn btn-success" (click)="newUser()"  >Back</button>
+</div>-->

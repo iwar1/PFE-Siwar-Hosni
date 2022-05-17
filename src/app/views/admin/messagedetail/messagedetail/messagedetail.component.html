@@ -1,0 +1,33 @@
+<br><br><br>
+<br><br><br>
+<div  class="detail-container" *ngIf="message" >
+  <h2>DETAILS</h2>
+  <div>
+    <label><b>First Name: </b></label> {{message.firstName}}
+  </div>
+  <br>
+  <div>
+    <label><b>Last Name: </b></label> {{message.lastName}}
+  </div>
+  <br>
+  <div>
+    <label><b>Company Name: </b></label> {{message.companyName}}
+  </div>
+  <br>
+  <div>
+    <label><b>Phone Number: </b></label>{{message.phoneNumber}}
+  </div>
+  <br>
+  <div>
+    <label><b>Email Id: </b></label>  {{message.email}}
+  </div>
+  <br>
+  <div>
+    <label><b>Message: </b></label> {{message.text}}
+  </div>
+
+
+<br><br>
+<!--<button (click)="detail()" class="btn btn-primary">Back to Message List</button><br>-->
+<button (click)="detail()"  class="btn btn-primary"> Back to Message List</button>
+</div>

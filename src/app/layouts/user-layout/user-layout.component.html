@@ -1,0 +1,115 @@
+ <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg" style="box-shadow: 0 10px 30px -12px rgb(0 0 0 / 42%), 0 4px 25px 0px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);">
+      <div class="sidebar-toggle-box">
+        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+      </div>
+      <!--logo start-->
+      <a href="" class="logo"><b>Transcri<span>BOT</span></b></a>
+      <!--logo end-->
+      <div class="nav notify-row" id="top_menu">
+        <!--  notification start -->
+      <ul class="nav top-menu">
+          <!-- settings start -->
+          <!--notif1-->
+           <li class="dropdown" style="margin-left: 10px;">
+            <a data-toggle="dropdown"   href="">
+               <i class="bi bi-bell"></i>
+              <span class="badge bg-theme">4</span>
+            </a>
+           </li>
+          <!-- settings end -->
+          <!-- inbox dropdown start-->
+          <!--notif2-->
+          <li id="header_inbox_bar" class="dropdown" >
+            <a data-toggle="dropdown"  href="#">
+               <i class="bi bi-envelope-paper"></i>
+              <span class="badge bg-theme">5</span>
+              </a>
+          </li>
+          <!-- inbox dropdown end -->
+          <!-- notification dropdown start-->
+          <!--notif3-->
+          <li id="header_notification_bar" class="dropdown"  >
+            <a data-toggle="dropdown"    href="#">
+               <i class="bi bi-bell"></i>
+              <span class="badge bg-warning">7</span>
+              </a>
+          </li>
+          <!-- notification dropdown end -->
+        </ul>
+        <!--  notification end -->
+      </div>
+      <br>
+     <div class="top-menu" style=" margin-left:200px ;">
+        <ul class="nav pull-right top-menu">
+          <li><a class="logout" href="">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+     <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+          <p class="centered"><a href="profile.html"><img src=" assets\img\user-01.png" class="img-circle" width="80"></a></p>
+          <h5 class="centered">Your account</h5>
+          <br>
+          <!--item1-->
+          <li class="mt">
+            <a class="active" href="#" routerLink="user">
+              <i class="bi bi-speedometer2"></i>
+              <span>DASHBOARD</span>
+              </a>
+          </li>
+         <!--item1-->
+          <li class="sub-menu">
+            <a href="index.html">
+               <i class="bi bi-house"></i>
+              <span>HOME</span>
+              </a>
+          </li>
+          <!--item1-->
+         <li class="sub-menu">
+            <a href="#" routerLink={{id}}>
+               <i class="bi bi-person-circle"></i>
+              <span>MY PROFILE</span>
+              </a>
+          </li>
+          <!--item1-->
+          <li class="sub-menu">
+            <a href="#" routerLink="send-message " >
+               <i class="bi bi-envelope"></i>
+              <span>CONTACT</span>
+              </a>
+          </li>
+          <!--item1-->
+          <li class="sub-menu">
+            <a href="javascript:;">
+               <i class="bi bi-mic"></i>
+              <span>RECORD</span>
+              </a>
+          </li>
+          <!--item1-->
+          <li class="sub-menu">
+            <a href="javascript:;">
+               <i class="bi bi-music-note-list"></i>
+              <span>RECORD LIST</span>
+              </a>
+          </li>
+
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+
+
+
+<!--this is spa page for content-->
+<router-outlet></router-outlet>
+<!--this is spa page for content-->
